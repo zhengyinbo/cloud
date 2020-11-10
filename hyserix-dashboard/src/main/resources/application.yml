@@ -1,13 +1,17 @@
 server:
-  port: 8082
+  port: 1100
 
 spring:
   application:
-    name: eureka-client
+    name: Hystrix-Dashboard
 
 eureka:
+  instance:
+    hostname: client-hystrix-dashboard
   client:
     service-url:
       defaultZone: http://localhost:8080/eureka/,http://localhost:8090/eureka/
-  instance:
-    hostname: client2
+
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "*"

@@ -1,6 +1,6 @@
 spring:
   application:
-    name: eureka-client1
+    name: eureka-client
 
 server:
   port: 8081
@@ -11,4 +11,6 @@ eureka:
       defaultZone: http://localhost:8080/eureka/,http://localhost:8090/eureka/
   instance:
     hostname: client1
+    lease-expiration-duration-in-seconds: 10 #10s内无心跳，就剔除
+    lease-renewal-interval-in-seconds: 3 #每3秒发送发一次心跳
 
