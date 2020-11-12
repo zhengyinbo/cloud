@@ -11,7 +11,6 @@ public class ClientController {
     @GetMapping("/hello")
     public String get(){
         System.out.println("服务提供者1");
-        int a = 10 / 0;
         return "Hello, springCloud 111";
     }
 

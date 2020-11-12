@@ -23,7 +23,7 @@ public class BeanConfig {
      * 覆盖掉ribbon原来默认掉轮询负载均衡策略
      * @return
      */
-    //@Bean
+    @Bean
     public IRule iRule(){
         return new RandomRule(); //随机
     }
